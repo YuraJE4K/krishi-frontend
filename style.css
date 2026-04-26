@@ -58,9 +58,3 @@ body {
     border-radius: 12px;
     width: 80%;
 }
-
-/* Chat */
-#chatBox {
-    margin-top: 10px;
-    text-align: left;
-}
