@@ -41,6 +41,21 @@ function sendMsg(){
     })
     .then(res => res.json())
     .then(data => {
-        document.getElementById("chatResult").innerText = data.reply;
+        let box = document.getElementById("chatBox");
+        box.innerHTML += `<p><b>You:</b> ${msg}</p>`;
+        box.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+    });
+}
+
+// MARKET
+function getPrices(){
+    let commodity = document.getElementById("commodity").value;
+    let state = document.getElementById("state").value;
+
+    fetch(`${API}/prices?commodity=${commodity}&state=${state}`)
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("marketResult").innerText =
+        JSON.stringify(data);
     });
 }
