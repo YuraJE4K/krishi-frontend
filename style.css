@@ -37,19 +37,17 @@ body {
 }
 
 .btn {
-    height: 120px;
-    background: #2E7D32;
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: translateY(-6px);
 }
 
 /* Sections */
