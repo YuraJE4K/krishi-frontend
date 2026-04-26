@@ -1,36 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Krishi Nirnay</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Krishi Nirnay</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🌾 Krishi Nirnay</h1>
-
-<div class="grid">
-    <button onclick="show('weather')">Weather</button>
-    <button onclick="show('crop')">Crop</button>
-    <button onclick="show('chat')">Chat</button>
+<div class="navbar">
+    <h1>🌾 Krishi Nirnay</h1>
 </div>
 
+<div class="header">
+    <h2>Smart AI Assistant for Farmers</h2>
+    <p>Select a feature</p>
+</div>
+
+<div class="grid">
+
+<div class="card" onclick="show('crop')">
+    <div class="btn">🌾 Crop</div>
+</div>
+
+<div class="card" onclick="show('market')">
+    <div class="btn">📊 Market</div>
+</div>
+
+<div class="card" onclick="show('details')">
+    <div class="btn">📘 Details</div>
+</div>
+
+<div class="card" onclick="show('weather')">
+    <div class="btn">🌦 Weather</div>
+</div>
+
+<div class="card" onclick="show('profit')">
+    <div class="btn">💰 Profit</div>
+</div>
+
+<div class="card" onclick="show('chat')">
+    <div class="btn">🤖 Chat</div>
+</div>
+
+<div class="card" onclick="show('scheme')">
+    <div class="btn">🏛 Scheme</div>
+</div>
+
+<div class="card" onclick="show('report')">
+    <div class="btn">📄 Report</div>
+</div>
+
+<div class="card" onclick="show('history')">
+    <div class="btn">🕘 History</div>
+</div>
+
+</div>
+
+<!-- SECTIONS -->
+
 <div id="weather" class="section">
-    <input id="city" placeholder="City">
+    <h3>Weather</h3>
+    <input id="city" placeholder="Enter city">
     <button onclick="getWeather()">Check</button>
     <p id="weatherResult"></p>
 </div>
 
 <div id="crop" class="section">
-    <input id="temp" placeholder="Temp">
+    <h3>Crop Recommendation</h3>
+    <input id="temp" placeholder="Temperature">
     <input id="humidity" placeholder="Humidity">
     <button onclick="getCrop()">Suggest</button>
     <p id="cropResult"></p>
 </div>
 
 <div id="chat" class="section">
-    <input id="msg" placeholder="Ask">
+    <h3>AI Chatbot</h3>
+    <input id="msg" placeholder="Ask something">
     <button onclick="sendMsg()">Send</button>
-    <p id="chatResult"></p>
+    <div id="chatBox"></div>
+</div>
+
+<div id="market" class="section">
+    <h3>Market Prices</h3>
+    <input id="commodity" placeholder="Crop">
+    <input id="state" placeholder="State">
+    <button onclick="getPrices()">Check</button>
+    <p id="marketResult"></p>
 </div>
 
 <script src="script.js"></script>
