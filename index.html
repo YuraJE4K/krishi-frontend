@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Krishi Nirnay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌾 Krishi Nirnay</h1>
+
+<div class="grid">
+    <button onclick="show('weather')">Weather</button>
+    <button onclick="show('crop')">Crop</button>
+    <button onclick="show('chat')">Chat</button>
+</div>
+
+<div id="weather" class="section">
+    <input id="city" placeholder="City">
+    <button onclick="getWeather()">Check</button>
+    <p id="weatherResult"></p>
+</div>
+
+<div id="crop" class="section">
+    <input id="temp" placeholder="Temp">
+    <input id="humidity" placeholder="Humidity">
+    <button onclick="getCrop()">Suggest</button>
+    <p id="cropResult"></p>
+</div>
+
+<div id="chat" class="section">
+    <input id="msg" placeholder="Ask">
+    <button onclick="sendMsg()">Send</button>
+    <p id="chatResult"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

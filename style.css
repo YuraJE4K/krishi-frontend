@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.grid {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.section {
+    display: none;
+    margin-top: 20px;
+}
